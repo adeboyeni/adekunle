@@ -76,7 +76,7 @@ function classify(res) {
   if (code === '07') return { state: 'unknown', message: 'duplicate request' };
   if (res.status >= 500 && code !== '09') return { state: 'unknown', message: b.message || `HTTP ${res.status}` };
   // 4xx, or 503 "service unavailable": request was not processed -> safe to refund
-  return { state: 'failed', message: b.message || `Provider error (code ${code})`, providerCode: code };
+  return { state: 'failed', message: b.message || `     const reason = b.message || `Provider error (code ${code})`;      if (/insufficient/i.test(reason)) {        console.error('[ALERT] ArewaGate wallet too low to fulfil an order - top up now');        return { state: 'failed', message: 'Service temporarily unavailable. You have not been charged.', providerCode: code };      }      return { state: 'failed', message: reason, providerCode: code }; (code ${code})`, providerCode: code };
 }
 
 module.exports = {
